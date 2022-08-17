@@ -81,7 +81,7 @@ a {
 .yellow--circle {
     width: 150px;
     height: 150px;
-    background-color: #ffcc1c;
+    background-color: #fe5f55;
     border-radius: 50%;
     position: absolute;
     top: 430px;
@@ -140,4 +140,51 @@ a {
 
 .main__aboutMe--description  p strong{
     color: #6b48ff;
+}
+
+/* ---------------------------------- WORK ---------------------------------- */
+
+.main__work {
+    background: linear-gradient(155deg, #e4e0f8 0%, #e4e0f8 20%, #9aedf4 100%);
+}
+
+
+.work--project {
+    width: 100%;
+}
+
+.project--titles {
+    padding: 20px;
+    border-bottom: 2px solid #6b48ff;
+}
+
+.project--titles h2 {
+    text-align: end;
+}
+
+.project {
+    display: flex;
+}
+
+.project--photo img {
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
+
+.project--description {
+    padding: 30px;
+    display: block;
+    width: 70vw;
+}
+
+.project--description ul {
+    display: block;
+}
+
+.project--description a svg {
+    width: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
