@@ -4,7 +4,8 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(155deg, #FAF2DA 0%, #FAF2DA 30%, #9AEDF4 100%);
+    background-color: #f2f4f6;
+    /* background: linear-gradient(155deg, #FAF2DA 0%, #FAF2DA 30%, #9AEDF4 70%, #e4e0f8 100%); */
     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
@@ -38,6 +39,14 @@ a {
     color: #0d3f67;
 }
 
+li.header__menu {
+    border-bottom: 3px solid #1ee3cf;
+}
+
+li.header__menu:hover {
+    border-bottom: 3px solid #fe5f55;
+}
+
 
 /** ---------------------------------- MAIN ---------------------------------- */
 .main__hero {
@@ -45,49 +54,52 @@ a {
 }
 
 .main__hero--description {
-    width: 70vw;
+    width: 100vw;
     height: 90vh;
 }
 
 .main__hero h1 {
     color: #0d3f67;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 90px;
     padding: 200px 100px;
 }
 
 .main__hero strong {
     color: #fe5f55;
     font-weight: 700;
-    font-size: 70px;
+    font-size: 100px;
 }
 
-
-.main_hero--image {
-    width: 30vw;
-    height: 90vh;
-}
-
-.light__yellow--circle {
-    width: 250px;
-    height: 250px;
-    background-color: #faf2da;
-    border-radius: 50%;
-    position: relative;
-    bottom: -400px;
-    z-index: 1;
-}
-
-.yellow--circle {
+.red--circle {
     width: 150px;
     height: 150px;
     background-color: #fe5f55;
+    border: 10px solid #e4e0f8;
     border-radius: 50%;
     position: absolute;
-    top: 430px;
+    top: 590px;
     right: 250px;
     z-index: 2;
+
+    animation-name: changeColor;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
 }
+
+@keyframes changeColor {
+    0% {
+        border: 10px solid #e4e0f8;
+    }
+    50% {
+        border: 10px solid #1ee3cf;
+    }
+
+    100%{
+        border: 10px solid #e4e0f8;
+    }
+}
+
 
 .web--page {
     position: absolute;
@@ -98,14 +110,17 @@ a {
     right: 270px;
 }
 
-.main__aboutMe {
-    display: flex;
+.aboutMe__title {
+    text-align: center;
+    padding: 10px 0 40px 0 ;
+    color: #0d3f67;
 }
+
 
 .main__aboutMe--photoContainer {
     width: 30%;
     height: fit-content;
-    margin: auto 100px;
+    margin: 0 auto;
 }
 
 .aboutMe--photo, .aboutMe--socialMedia {
@@ -122,11 +137,11 @@ a {
 .sm--icon {
     width: 25px;
     height: 25px;
-    margin: 20px 10px 150px 0;
+    margin: 20px 10px 20px 0;
 }
 
 .main__aboutMe--description {
-    width: 70%;
+    width: 100%;
 }
 
 .main__aboutMe--description  h1{
@@ -134,7 +149,7 @@ a {
 }
 
 .main__aboutMe--description  p{
-    padding: 30px 50px 0 0;
+    padding:37px 246px 60px 246px;
     font-size: 20px;
 }
 
@@ -144,9 +159,9 @@ a {
 
 /* ---------------------------------- WORK ---------------------------------- */
 
-.main__work {
+/* .main__work {
     background: linear-gradient(155deg, #e4e0f8 0%, #e4e0f8 20%, #9aedf4 100%);
-}
+} */
 
 
 .work--project {
@@ -154,8 +169,9 @@ a {
 }
 
 .project--titles {
-    padding: 40px 0;
+    padding: 40px 40px;
     text-align: center;
+    color: #0d3f67;
     /* border-bottom: 2px solid #6b48ff; */
 }
 
@@ -214,4 +230,79 @@ a {
 #project--nft:hover ul li a:hover, #project--product:hover ul li a:hover{
     border-bottom: 3px solid #fe5f55;
     font-size: 20px;
+}
+
+/* --------------------------------- Skills --------------------------------- */
+
+.skills {
+    width: 100%;
+}
+
+.skills__title {
+    padding: 40px 40px;
+    text-align: center;
+    color: #0d3f67;
+    /* border-bottom: 2px solid #6b48ff; */
+}
+
+.skills {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.skill__img--html, .skill__img--css, .skill__img--bootstrap, .skill__img--git, .skill__img--github, .skill__img--mySql, .skill__img--sqlServer, .skill__img--oracle{
+    width: 80px;
+    height: 80px;
+}
+
+.skill__img--html {
+    background: url(./assets/html-icon.svg) no-repeat;
+}
+
+.skill__img--css {
+    background: url(./assets/css-icon.svg) no-repeat;
+}
+
+.skill__img--bootstrap {
+    background: url(./assets/bootstrap-5-logo-icon.svg) no-repeat;
+}
+
+.skill__img--git {
+    background: url(./assets/git-icon.svg) no-repeat;
+}
+
+.skill__img--github {
+    background: url(./assets/github-icon.svg) no-repeat;
+}
+
+.skill__img--mySql {
+    background: url(./assets/mysql-icon.svg) no-repeat;
+}
+
+.skill__img--sqlServer {
+    background: url(./assets/sql-server-icon.svg) no-repeat;
+}
+
+.skill__img--oracle {
+    background: url(./assets/oracle-icon.svg) no-repeat;
+}
+
+
+.skill__img--html h5, .skill__img--css h5, .skill__img--bootstrap h5, .skill__img--git h5, .skill__img--github h5, .skill__img--mySql h5, .skill__img--sqlServer h5, .skill__img--oracle h5{
+    display: none;
+}
+
+.skill__img--html:hover h5, .skill__img--css:hover h5, .skill__img--bootstrap:hover h5, .skill__img--git:hover h5, .skill__img--github:hover h5, .skill__img--mySql:hover h5, .skill__img--sqlServer:hover h5, .skill__img--oracle:hover h5{
+    display: flex;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(228, 224, 248, .9);
+    color: black;
+    text-align: center;
+    margin: -43px 12px 0 39px;
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
+    justify-content: center;
+    align-items: center;
 }

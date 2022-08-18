@@ -13,9 +13,9 @@
 	<!-- ----------------------------------------------------------------------- -->
 	<header>
 		<ul>
-			<li><a href="">ABOUT ME</a></li>
-			<li><a href="">WORK</a></li>
-			<li><a href="">SKILLS</a></li>
+			<li class="header__menu"><a href="">ABOUT ME</a></li>
+			<li class="header__menu"><a href="">WORK</a></li>
+			<li class="header__menu"><a href="">SKILLS</a></li>
 		</ul>
 	</header>
 	
@@ -27,37 +27,37 @@
 		<section class="main__hero">
 			<div class="main__hero--description">
 				<h1>Hi, <br>
-						I'm Francina Dippitón, <br>
+						I'm <i>Francina Dippitón</i>, <br>
 						web developer<strong>.</strong></h1>
 			</div>
 			<div class="main_hero--image">
-				<div class="light__yellow--circle"></div>
-				<div class="yellow--circle"></div>
-				<img class="web--page" src="./assets/web-page-source-code-icon.svg" alt="">
+				<!-- <div class="light__yellow--circle"></div> -->
+				<div class="red--circle"></div>
+				<!-- <img class="web--page" src="./assets/web-page-source-code-icon.svg" alt=""> -->
 			</div>
 		</section>
 
 		<!-- ABOUT ME -->
-		<section class="main__aboutMe">
-			<div class="main__aboutMe--photoContainer">
-				<div class="aboutMe--photo">
-					<img class="photo--profile" src="./assets/profile.jpg" alt="">
-					<h1>Francina Dippiton</h1>
+		<section>
+			<h1 class="aboutMe__title">ABOUT ME</h1>
+			<div class="main__aboutMe">
+				<div class="main__aboutMe--photoContainer">
+					<div class="aboutMe--photo">
+						<img class="photo--profile" src="./assets/profile.jpg" alt="">
+						<h1>Francina Dippiton</h1>
+					</div>
+					<div class="aboutMe--socialMedia">
+						<a href=""><img class="sm--icon" src="./assets/github-icon.svg" alt=""></a>
+						<a href=""><img class="sm--icon" src="./assets/twitter-icon.svg" alt=""></a>
+						<a href=""><img class="sm--icon" src="./assets/linkedin-square-icon.svg" alt=""></a>
+						<a href=""><img class="sm--icon" src="./assets/black-instagram-icon.svg" alt=""></a>
+					</div>
 				</div>
-				<div class="aboutMe--socialMedia">
-					<a href=""><img class="sm--icon" src="./assets/github-icon.svg" alt=""></a>
-					<a href=""><img class="sm--icon" src="./assets/twitter-icon.svg" alt=""></a>
-					<a href=""><img class="sm--icon" src="./assets/linkedin-square-icon.svg" alt=""></a>
-					<a href=""><img class="sm--icon" src="./assets/black-instagram-icon.svg" alt=""></a>
+	
+				<div class="main__aboutMe--description">
+					<p>Hi, I'm Francina Dippitón, and aspiring fullstack developer 
+							and <strong>Computer Systems Engineer</strong>. I'm passionate about tech and that's why I constantly seek to gain knowledge, and at the same time be able to improve and develop my skills as a programmer. I enjoy to be in nature and learn norwegian.</p>
 				</div>
-			</div>
-
-			<div class="main__aboutMe--description">
-				<h1>ABOUT ME</h1>
-				<p>Hi, I'm Francina Dippitón, and aspiring fullstack developer 
-						and <strong>Computer Systems Engineer</strong>. </p>
-				<p>I'm passionate about tech and that's why I constantly seek to gain knowledge, and at the same time be able to improve and develop my skills as a programmer. </p>
-				<p>I enjoy to be in nature and learn norwegian 🇳🇴.</p>
 			</div>
 		</section>
 
@@ -91,11 +91,33 @@
 		<!-- SKILLS -->
 		<section class="main__skills">
 			<div>
-				<h1>SKILLS</h1>
+				<h1 class="skills__title">SKILLS</h1>
 			</div>
-			
-			<div>
-
+			<div class="skills">
+				<div class="skill__img--html">
+					<h5>HTML</h5>
+				</div>
+				<div class="skill__img--css">
+					<h5>CSS</h5>
+				</div>
+				<div class="skill__img--bootstrap">
+					<h5>Bootstrap</h5>
+				</div>
+				<div class="skill__img--git">
+					<h5>Git</h5>
+				</div>
+				<div class="skill__img--github">
+					<h5>Github</h5>
+				</div>
+				<div class="skill__img--mySql">
+					<h5>MySQL</h5>
+				</div>
+				<div class="skill__img--sqlServer">
+					<h5>SQL Server</h5>
+				</div>
+				<div class="skill__img--oracle">
+					<h5>Oracle</h5>
+				</div>
 			</div>
 		</section>
 	</main>
