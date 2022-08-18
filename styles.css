@@ -154,37 +154,64 @@ a {
 }
 
 .project--titles {
-    padding: 20px;
-    border-bottom: 2px solid #6b48ff;
-}
-
-.project--titles h2 {
-    text-align: end;
+    padding: 40px 0;
+    text-align: center;
+    /* border-bottom: 2px solid #6b48ff; */
 }
 
 .project {
     display: flex;
+    padding: 20px;
+    justify-content:space-around;
+    flex-wrap: wrap;
 }
 
-.project--photo img {
+#project--nft {
+    background: url(./assets/nft-card.png) no-repeat;
     width: 500px;
-    height: 500px;
-    padding: 30px;
-}
-
-.project--description {
-    padding: 30px;
+    height: 480px;
+    background-size: contain;
     display: block;
-    width: 70vw;
+    border: 3px solid black;
 }
 
-.project--description ul {
+#project--nft ul, #project--product ul {
+    display: none;
+}
+
+
+#project--product {
+    background: url(./assets/product-card.png) no-repeat;
+    width: 500px;
+    height: 480px;
+    background-size: contain;
     display: block;
+    border: 3px solid black;
+
 }
 
-.project--description a svg {
-    width: 20px;
-    width: 20px;
+#project--nft:hover ul, #project--product:hover ul {
+    display: block;
+    width: 367px;
+    height: 397px;
+    background-color: rgba(228, 224, 248, .9);
+    text-align: center;
+    margin: auto;
+    border: 3px solid black;
+}
+
+#project--nft:hover ul li, #project--product:hover ul li{
+    margin: 10px auto;
+    height: 35%;
     vertical-align: middle;
-    margin-right: 10px;
+}
+
+#project--nft:hover ul li a, #project--product:hover ul li a{
+    color: #0d3f67;
+    font-size: 20px;
+}
+
+#project--nft:hover ul li a:hover, #project--product:hover ul li a:hover{
+    border-bottom: 3px solid #fe5f55;
+    font-size: 20px;
 }
