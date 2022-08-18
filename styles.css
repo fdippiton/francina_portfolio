@@ -49,20 +49,25 @@ li.header__menu:hover {
 
 
 /** ---------------------------------- MAIN ---------------------------------- */
+
+main {
+    padding: 95px;
+}
+
 .main__hero {
     display: flex;
 }
 
 .main__hero--description {
     width: 100vw;
-    height: 90vh;
+    height: 78vh;
 }
 
 .main__hero h1 {
     color: #0d3f67;
     font-weight: 700;
     font-size: 90px;
-    padding: 200px 100px;
+    padding: 100px 100px;
 }
 
 .main__hero strong {
@@ -112,7 +117,7 @@ li.header__menu:hover {
 
 .aboutMe__title {
     text-align: center;
-    padding: 10px 0 40px 0 ;
+    padding: 0px 0 100px 0;
     color: #0d3f67;
 }
 
@@ -169,7 +174,7 @@ li.header__menu:hover {
 }
 
 .project--titles {
-    padding: 40px 40px;
+    padding: 90px 40px;
     text-align: center;
     color: #0d3f67;
     /* border-bottom: 2px solid #6b48ff; */
@@ -189,6 +194,7 @@ li.header__menu:hover {
     background-size: contain;
     display: block;
     border: 3px solid black;
+    box-shadow: 10px 10px black;
 }
 
 #project--nft ul, #project--product ul {
@@ -203,14 +209,14 @@ li.header__menu:hover {
     background-size: contain;
     display: block;
     border: 3px solid black;
-
+    box-shadow: 10px 10px black;
 }
 
 #project--nft:hover ul, #project--product:hover ul {
     display: block;
     width: 367px;
     height: 397px;
-    background-color: rgba(228, 224, 248, .9);
+    background-color: rgb(228, 224, 248);
     text-align: center;
     margin: auto;
     border: 3px solid black;
@@ -223,13 +229,20 @@ li.header__menu:hover {
 }
 
 #project--nft:hover ul li a, #project--product:hover ul li a{
-    color: #0d3f67;
+    color: black;
     font-size: 20px;
+    border-bottom: 3px solid black;
+    /* box-shadow: 3px 3px black; */
+    padding: 10px;
+    font-weight: 400;
+    font-style: italic;
 }
 
 #project--nft:hover ul li a:hover, #project--product:hover ul li a:hover{
     border-bottom: 3px solid #fe5f55;
+    /* box-shadow: 3px 3px #fe5f55; */
     font-size: 20px;
+    padding: 10px;
 }
 
 /* --------------------------------- Skills --------------------------------- */
@@ -239,7 +252,7 @@ li.header__menu:hover {
 }
 
 .skills__title {
-    padding: 40px 40px;
+    padding: 120px 0 80px 0;
     text-align: center;
     color: #0d3f67;
     /* border-bottom: 2px solid #6b48ff; */
@@ -248,7 +261,7 @@ li.header__menu:hover {
 .skills {
     display: flex;
     justify-content: space-around;
-    padding: 40px 0;
+    padding: 30px 0 30px 0;
 }
 
 .skill__img--html, .skill__img--css, .skill__img--bootstrap, .skill__img--git, .skill__img--github, .skill__img--mySql, .skill__img--sqlServer, .skill__img--oracle{
@@ -305,4 +318,29 @@ li.header__menu:hover {
     box-shadow: 5px 5px black;
     justify-content: center;
     align-items: center;
+}
+
+
+/* --------------------------------- Footer --------------------------------- */
+
+footer {
+    background-color: #e4e0f8;
+    height: 150px;
+    
+}
+
+h2.findMe_title {
+    color: black;
+    text-align: center;
+    padding: 30px 0 10px 0;
+}
+
+.sm--icon--footer {
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+}
+
+.footer__socialMedia {
+    text-align: center;
 }
