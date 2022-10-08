@@ -5,18 +5,18 @@ body {
     padding: 0;
     margin: 0;
     background-color: #f2f4f6;
-    /* background: linear-gradient(155deg, #FAF2DA 0%, #FAF2DA 30%, #9AEDF4 70%, #e4e0f8 100%); */
-    /* background-repeat: no-repeat; */
+     /* background: linear-gradient(155deg, #FAF2DA 0%, #FAF2DA 30%, #9AEDF4 70%, #e4e0f8 100%); */
+     /* background-repeat: no-repeat; */
     background-attachment: fixed;
     font-family: 'Montserrat', sans-serif;
 }
 
-* {
+ * {
     padding: 0;
     margin: 0;
 }
 
-/** --------------------------------- HEADER --------------------------------- */
+ /** --------------------------------- HEADER --------------------------------- */
 header {
     width: 100%;
     height: 10%;
@@ -48,7 +48,7 @@ li.header__menu:hover {
 }
 
 
-/** ---------------------------------- MAIN ---------------------------------- */
+ /** ---------------------------------- MAIN ---------------------------------- */
 
 main {
     padding: 95px;
@@ -60,7 +60,7 @@ main {
 
 .main__hero--description {
     width: 100vw;
-    height: 78vh;
+    height: 75vh;
 }
 
 .main__hero h1 {
@@ -79,268 +79,385 @@ main {
 .red--circle {
     width: 150px;
     height: 150px;
-    background-color: #fe5f55;
+background-color: #fe5f55;
+border: 10px solid #e4e0f8;
+border-radius: 50%;
+position: absolute;
+top: 590px;
+right: 250px;
+z-index: 2;
+ 
+animation-name: changeColor;
+animation-duration: 1ms;
+animation-fill-mode: forwards;
+ }
+ 
+ @keyframes changeColor {
+0% {
     border: 10px solid #e4e0f8;
-    border-radius: 50%;
-    position: absolute;
-    top: 590px;
-    right: 250px;
-    z-index: 2;
-
-    animation-name: changeColor;
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards;
 }
+50% {
+    border: 10px solid #1ee3cf;
+}
+ 
+100%{
+    border: 10px solid #e4e0f8;
+}
+ }
+ 
+ 
+ .web--page {
+position: absolute;
+z-index: 3;
+width: 200px;
+height: 100px;
+top: 530px;
+right: 270px;
+ }
+ 
+ .aboutMe__title {
+text-align: center;
+padding: 40px 0 100px 0;
+color: #0d3f67;
+ }
+ 
+ 
+ .main__aboutMe--photoContainer {
+width: 30%;
+height: fit-content;
+margin: 0 auto;
+ }
+ 
+ .aboutMe--photo, .aboutMe--socialMedia {
+text-align: center;
+ }
+ 
+ .photo--profile {
+max-width: 300px;
+max-height: 300px;
+border-radius: 50%;
+margin: 0px 0 50px 0;
+ }
+ 
+ .sm--icon {
+width: 25px;
+height: 25px;
+margin: 20px 10px 20px 0;
+ }
+ 
+ .main__aboutMe--description {
+width: 100%;
+ }
+ 
+ .main__aboutMe--description  h1{
+padding: 30px 0;
+ }
+ 
+ .main__aboutMe--description  p{
+padding:37px 246px 60px 246px;
+font-size: 20px;
+ }
+ 
+ .main__aboutMe--description  p strong{
+color: #6b48ff;
+ }
+ 
+ /* ---------------------------------- WORK ---------------------------------- */
+ 
+ /* .main__work {
+background: linear-gradient(155deg, #e4e0f8 0%, #e4e0f8 20%, #9aedf4 100%);
+ } */
+ 
+ 
+ .work--project {
+width: 100%;
+ }
+ 
+ .project--titles {
+padding: 90px 40px;
+text-align: center;
+color: #0d3f67;
+/* border-bottom: 2px solid #6b48ff; */
+ }
+ 
+ .project {
+display: flex;
+padding: 20px;
+justify-content:space-around;
+flex-wrap: wrap;
+ }
+ 
+ #project--nft {
+background: url(./assets/nft-card.png) no-repeat;
+width: 500px;
+height: 480px;
+background-size: contain;
+display: block;
+border: 3px solid black;
+box-shadow: 10px 10px black;
+ }
+ 
+ #project--nft ul, #project--product ul, #project--family ul, #project--einstein ul{
+display: none;
+ }
+ 
+ #project--nft, #project--product, #project--family, #project--einstein {
+    margin-bottom: 50px;
+}
+ 
+ #project--product {
+background: url(./assets/product-card.png) no-repeat;
+width: 500px;
+height: 480px;
+background-size: contain;
+display: block;
+border: 3px solid black;
+box-shadow: 10px 10px black;
+ }
+ 
+ #project--family {
+background: url(./assets/eternal-family.png) no-repeat;
+width: 500px;
+height: 480px;
+background-size: contain;
+display: block;
+border: 3px solid black;
+box-shadow: 10px 10px black;
+ }
+ 
+ #project--einstein {
+background: url(./assets/einstein.png) no-repeat;
+width: 500px;
+height: 480px;
+background-size: contain;
+display: block;
+border: 3px solid black;
+box-shadow: 10px 10px black;
+ }
+ 
+ #project--nft:hover ul, #project--product:hover ul, #project--family:hover ul, #project--einstein:hover ul {
+display: block;
+width: 367px;
+height: 397px;
+background-color: rgb(228, 224, 248);
+text-align: center;
+margin: auto;
+border: 3px solid black;
+ }
+ 
+ #project--nft:hover ul li, #project--product:hover ul li, #project--family:hover ul li, #project--einstein:hover ul li{
+margin: 10px auto;
+height: 35%;
+vertical-align: middle;
+ }
+ 
+ #project--nft:hover ul li a, #project--product:hover ul li a, #project--family:hover ul li a, #project--einstein:hover ul li a{
+color: black;
+font-size: 20px;
+border-bottom: 3px solid black;
+/* box-shadow: 3px 3px black; */
+padding: 10px;
+font-weight: 400;
+font-style: italic;
+ }
+ 
+ #project--nft:hover ul li a:hover, #project--product:hover ul li a:hover, #project--family:hover ul li a:hover, #project--einstein:hover ul li a:hover{
+border-bottom: 3px solid #fe5f55;
+/* box-shadow: 3px 3px #fe5f55; */
+font-size: 20px;
+padding: 10px;
+ }
+ 
+ /* --------------------------------- Skills --------------------------------- */
+ 
+ .skills {
+width: 100%;
+ }
+ 
+ .skills__title {
+padding: 120px 0 80px 0;
+text-align: center;
+color: #0d3f67;
+     /* border-bottom: 2px solid #6b48ff; */
+ }
+ 
+ .skills {
+display: flex;
+justify-content: space-around;
+padding: 30px 0 30px 0;
+ }
+ 
+ .skill__img--html, .skill__img--css, .skill__img--bootstrap, .skill__img--git, .skill__img--github, .skill__img--mySql, .skill__img--sqlServer, .skill__img--oracle{
+width: 80px;
+height: 80px;
+ }
+ 
+ .skill__img--html {
+background: url(./assets/html-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--css {
+background: url(./assets/css-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--bootstrap {
+background: url(./assets/bootstrap-5-logo-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--git {
+background: url(./assets/git-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--github {
+background: url(./assets/github-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--mySql {
+background: url(./assets/mysql-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--sqlServer {
+background: url(./assets/sql-server-icon.svg) no-repeat;
+ }
+ 
+ .skill__img--oracle {
+background: url(./assets/oracle-icon.svg) no-repeat;
+ }
+ 
+ 
+ .skill__img--html h5, .skill__img--css h5, .skill__img--bootstrap h5, .skill__img--git h5, .skill__img--github h5, .skill__img--mySql h5, .skill__img--sqlServer h5, .skill__img--oracle h5{
+display: none;
+ }
+ 
+ .skill__img--html:hover h5, .skill__img--css:hover h5, .skill__img--bootstrap:hover h5, .skill__img--git:hover h5, .skill__img--github:hover h5, .skill__img--mySql:hover h5, .skill__img--sqlServer:hover h5, .skill__img--oracle:hover h5{
+display: flex;
+width: 90px;
+height: 30px;
+background-color: rgba(228, 224, 248, .9);
+color: black;
+text-align: center;
+margin: -43px 12px 0 39px;
+border: 3px solid black;
+box-shadow: 5px 5px black;
+justify-content: center;
+align-items: center;
+ }
+ 
+ 
+ /* --------------------------------- Footer --------------------------------- */
+ 
+ footer {
+background-color: #e4e0f8;
+height: 150px;
 
-@keyframes changeColor {
-    0% {
-        border: 10px solid #e4e0f8;
+ }
+ 
+ h2.findMe_title {
+color: black;
+text-align: center;
+padding: 30px 0 10px 0;
+ }
+ 
+ .sm--icon--footer {
+width: 25px;
+height: 25px;
+padding: 5px;
+ }
+ 
+ .footer__socialMedia {
+text-align: center;
+ }
+
+/* @media (max-width: 1471px) {
+    #aboutMe {
+    display: flex;
+        flex-direction: column;
     }
-    50% {
-        border: 10px solid #1ee3cf;
+    .main__aboutMe--description p {
+        padding: 30px 20px;
+        text-align: center;
     }
-
-    100%{
-        border: 10px solid #e4e0f8;
-    }
-}
-
-
-.web--page {
-    position: absolute;
-    z-index: 3;
-    width: 200px;
-    height: 100px;
-    top: 530px;
-    right: 270px;
-}
-
-.aboutMe__title {
-    text-align: center;
-    padding: 0px 0 100px 0;
-    color: #0d3f67;
-}
-
-
-.main__aboutMe--photoContainer {
-    width: 30%;
-    height: fit-content;
-    margin: 0 auto;
-}
-
-.aboutMe--photo, .aboutMe--socialMedia {
-    text-align: center;
-}
-
-.photo--profile {
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 50%;
-    margin: 0px 0 50px 0;
-}
-
-.sm--icon {
-    width: 25px;
-    height: 25px;
-    margin: 20px 10px 20px 0;
-}
-
-.main__aboutMe--description {
-    width: 100%;
-}
-
-.main__aboutMe--description  h1{
-    padding: 30px 0;
-}
-
-.main__aboutMe--description  p{
-    padding:37px 246px 60px 246px;
-    font-size: 20px;
-}
-
-.main__aboutMe--description  p strong{
-    color: #6b48ff;
-}
-
-/* ---------------------------------- WORK ---------------------------------- */
-
-/* .main__work {
-    background: linear-gradient(155deg, #e4e0f8 0%, #e4e0f8 20%, #9aedf4 100%);
 } */
 
+/* @media (max-width: 1086px) {
+    .main__hero {
+        display: flex;
+        flex-direction: column;
+    }
+    .main__hero--description {
+        width: 100%;
+    }
 
-.work--project {
-    width: 100%;
-}
+    .main__hero--description h1{
+        font-size: 70px;
+    }
+    .aboutMe--photo {
+        width:fit-content;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    img.photo--profile {
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */
 
-.project--titles {
-    padding: 90px 40px;
-    text-align: center;
-    color: #0d3f67;
-    /* border-bottom: 2px solid #6b48ff; */
-}
+/* @media (max-width: 834px) {
+    header ul {
+        display: flex;
+    } 
 
-.project {
-    display: flex;
-    padding: 20px;
-    justify-content:space-around;
-    flex-wrap: wrap;
-}
+    main {
+        padding: 0 auto;
+    }
+    .main__hero--description h1{
+        font-size: 70px;
+        padding: 0;
+    }
 
-#project--nft {
-    background: url(./assets/nft-card.png) no-repeat;
-    width: 500px;
-    height: 480px;
-    background-size: contain;
-    display: block;
-    border: 3px solid black;
-    box-shadow: 10px 10px black;
-}
+    #aboutMe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-#project--nft ul, #project--product ul {
-    display: none;
-}
+    .aboutMe--photo--socialMedia {
+        display: flex;
+    }
 
+    .main__aboutMe--photoContainer {
+        margin: 0 auto;
+        width:fit-content;
+    }
 
-#project--product {
-    background: url(./assets/product-card.png) no-repeat;
-    width: 500px;
-    height: 480px;
-    background-size: contain;
-    display: block;
-    border: 3px solid black;
-    box-shadow: 10px 10px black;
-}
+    #project--product, #project--family, #project--nft, #project--einstein {
+        width: 400px;
+        height: 380px;
+    } 
+} */
 
-#project--nft:hover ul, #project--product:hover ul {
-    display: block;
-    width: 367px;
-    height: 397px;
-    background-color: rgb(228, 224, 248);
-    text-align: center;
-    margin: auto;
-    border: 3px solid black;
-}
+/* @media (max-width: 629px) {
 
-#project--nft:hover ul li, #project--product:hover ul li{
-    margin: 10px auto;
-    height: 35%;
-    vertical-align: middle;
-}
+    main {
+        padding: 40px 55px;
+    }
 
-#project--nft:hover ul li a, #project--product:hover ul li a{
-    color: black;
-    font-size: 20px;
-    border-bottom: 3px solid black;
-    /* box-shadow: 3px 3px black; */
-    padding: 10px;
-    font-weight: 400;
-    font-style: italic;
-}
+    .main__hero--description {
+        height:70vh;
+    }
 
-#project--nft:hover ul li a:hover, #project--product:hover ul li a:hover{
-    border-bottom: 3px solid #fe5f55;
-    /* box-shadow: 3px 3px #fe5f55; */
-    font-size: 20px;
-    padding: 10px;
-}
+    .main__hero--description h1{
+        font-size: 50px;
+    }
+    .photo--profile {
+        max-width: 200px;
+        max-height: 200px;
+    }
 
-/* --------------------------------- Skills --------------------------------- */
-
-.skills {
-    width: 100%;
-}
-
-.skills__title {
-    padding: 120px 0 80px 0;
-    text-align: center;
-    color: #0d3f67;
-    /* border-bottom: 2px solid #6b48ff; */
-}
-
-.skills {
-    display: flex;
-    justify-content: space-around;
-    padding: 30px 0 30px 0;
-}
-
-.skill__img--html, .skill__img--css, .skill__img--bootstrap, .skill__img--git, .skill__img--github, .skill__img--mySql, .skill__img--sqlServer, .skill__img--oracle{
-    width: 80px;
-    height: 80px;
-}
-
-.skill__img--html {
-    background: url(./assets/html-icon.svg) no-repeat;
-}
-
-.skill__img--css {
-    background: url(./assets/css-icon.svg) no-repeat;
-}
-
-.skill__img--bootstrap {
-    background: url(./assets/bootstrap-5-logo-icon.svg) no-repeat;
-}
-
-.skill__img--git {
-    background: url(./assets/git-icon.svg) no-repeat;
-}
-
-.skill__img--github {
-    background: url(./assets/github-icon.svg) no-repeat;
-}
-
-.skill__img--mySql {
-    background: url(./assets/mysql-icon.svg) no-repeat;
-}
-
-.skill__img--sqlServer {
-    background: url(./assets/sql-server-icon.svg) no-repeat;
-}
-
-.skill__img--oracle {
-    background: url(./assets/oracle-icon.svg) no-repeat;
-}
-
-
-.skill__img--html h5, .skill__img--css h5, .skill__img--bootstrap h5, .skill__img--git h5, .skill__img--github h5, .skill__img--mySql h5, .skill__img--sqlServer h5, .skill__img--oracle h5{
-    display: none;
-}
-
-.skill__img--html:hover h5, .skill__img--css:hover h5, .skill__img--bootstrap:hover h5, .skill__img--git:hover h5, .skill__img--github:hover h5, .skill__img--mySql:hover h5, .skill__img--sqlServer:hover h5, .skill__img--oracle:hover h5{
-    display: flex;
-    width: 90px;
-    height: 30px;
-    background-color: rgba(228, 224, 248, .9);
-    color: black;
-    text-align: center;
-    margin: -43px 12px 0 39px;
-    border: 3px solid black;
-    box-shadow: 5px 5px black;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* --------------------------------- Footer --------------------------------- */
-
-footer {
-    background-color: #e4e0f8;
-    height: 150px;
-    
-}
-
-h2.findMe_title {
-    color: black;
-    text-align: center;
-    padding: 30px 0 10px 0;
-}
-
-.sm--icon--footer {
-    width: 25px;
-    height: 25px;
-    padding: 5px;
-}
-
-.footer__socialMedia {
-    text-align: center;
-}
+    #project--product, #project--family, #project--nft, #project--einstein {
+        width: 200px;
+        height: 180px;
+        background-size:contain;
+    } 
+} */
